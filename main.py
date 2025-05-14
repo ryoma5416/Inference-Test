@@ -85,8 +85,8 @@ def generic_inference(model, tokenizer, prompt, stop_sequences=None):
 
 if __name__ == "__main__":
     # # load model
-    # model_path = r'D:\PycharmProjects\LLM_Inference_test\models\Meta-Llama-3.2-3B-Instruct-hf'
-    # model, tokenizer = get_model_and_tokenizer(model_path)
+    model_path = r'models\Meta-Llama-3.2-3B-Instruct-hf'
+    model, tokenizer = get_model_and_tokenizer(model_path)
 
     # load datasets
     # trivia_datasets = load_dataset('TimoImhof/TriviaQA-in-SQuAD-format')['unmodified']  # 線上載入
@@ -94,17 +94,17 @@ if __name__ == "__main__":
     # trivia_datasets = trivia_datasets.remove_columns(['id', 'context']).to_csv(r'datasets\TriviaQA-in-SQuAD-format.csv')
     print(trivia_datasets)
 
-    # for i in range(5):
-    #     print('-----------------------------------------------------------------------------')
-    #     print('question :', trivia_datasets[i]['question'])
-    #     print('answer :', trivia_datasets[i]['answers']['text'][0])
-    #     # print('-----------------------------------------------------------------------------')
-    #     prompt = answer_prompt(trivia_datasets[i]['question'])
-    #     print('prompt :\n', prompt)
-    #     print('-----------------------------------------------------------------------------')
-    #     model_pred = generic_inference(model, tokenizer, prompt, stop_sequences=STOP_SEQUENCES)
-    #     print('model_pred :\n', model_pred)
-    #     print('-----------------------------------------------------------------------------')
+    for i in range(5):
+        print('-----------------------------------------------------------------------------')
+        print('question :', trivia_datasets[i]['question'])
+        print('answer :', trivia_datasets[i]['answers']['text'][0])
+        # print('-----------------------------------------------------------------------------')
+        prompt = answer_prompt(trivia_datasets[i]['question'])
+        print('prompt :\n', prompt)
+        print('-----------------------------------------------------------------------------')
+        model_pred = generic_inference(model, tokenizer, prompt, stop_sequences=STOP_SEQUENCES)
+        print('model_pred :\n', model_pred)
+        print('-----------------------------------------------------------------------------')
 
 
 
