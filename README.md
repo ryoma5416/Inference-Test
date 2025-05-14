@@ -1,4 +1,6 @@
-在運行main.py 請參考 pip list.txt 中的套件清單進行安裝
+在運行main.py前
+請參考 pip list.txt 中的套件清單進行安裝
+
 pip list.txt：列出專案所需的 Python 套件清單。
 
 main.py：主程式，負責載入模型並執行推理。
