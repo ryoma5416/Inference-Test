@@ -13,6 +13,12 @@ datasets/：放置要使用的的資料集。
 # Models
 models/：儲存轉換後的模型檔案。
 
+資較夾架構約為
+
+![image](https://github.com/user-attachments/assets/68fa7803-170f-4021-acda-2a0a5e0de7d3)
+
+
+
 # 原始權重轉為 Huggingface 格式
 llama model to hf.txt：說明如何將 LLaMA 模型原始權重轉換為 Hugging Face 格式。供transformers 套件使用。
 
