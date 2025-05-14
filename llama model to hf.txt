@@ -1,0 +1,14 @@
+需要 pip install tiktoken blobfile
+
+先下載 transformers 腳本
+git clone https://github.com/huggingface/transformers.git
+
+在 terminal  cd 進 transformers 資料夾
+
+在transformers 中找 transformers/src/transformers/models/llama 裡面有個 convert_llama_weights_to_hf.py 檔案
+照裡面內容 在 terminal 輸入
+python src/transformers/models/llama/convert_llama_weights_to_hf.py \
+    --input_dir /path/to/downloaded/llama/weights --model_size 1B --llama_version 3.2 --output_dir /output/path
+例如 Meta-Llama-3.2-1B 模型就輸入
+
+python src/transformers/models/llama/convert_llama_weights_to_hf.py --input_dir D:\PycharmProjects\LLM_Inference_test\models\Meta-Llama-3.2-1B-Instruct --model_size 1B --llama_version 3.2 --output_dir D:\PycharmProjects\LLM_Inference_test\models\Meta-Llama-3.2-1B-Instruct-hf-test

@@ -1,0 +1,14 @@
+torch(要去 Pytorch 官網下載對應版本)
+# LLM model 相關
+transformers
+accelerate
+
+# Hugginface 資料集相關
+datasets
+
+pip install transformers accelerate datasets
+
+
+
+
+
