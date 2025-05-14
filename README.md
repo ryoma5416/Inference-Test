@@ -10,8 +10,8 @@ main.py：主程式，負責載入模型並執行推理。 使用之模型為Hug
 # Datasets
 datasets/：放置要使用的的資料集。
 
-# Models 可以直接上 Huggingface 網站下載模型
-models/：儲存轉換後的模型檔案。
+# Models 
+models/：儲存轉換後的模型檔案，可以直接上 Huggingface 網站下載模型
 
 資較夾架構約為
 
