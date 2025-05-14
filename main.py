@@ -84,8 +84,9 @@ def generic_inference(model, tokenizer, prompt, stop_sequences=None):
 
 
 if __name__ == "__main__":
-    # # load model
-    model_path = r'models\Meta-Llama-3.2-3B-Instruct-hf'
+    # load model  model_name 放模型的資料夾名稱
+    model_name = 'Meta-Llama-3.2-3B-Instruct-hf'
+    model_path = rf'models\{model_name}'
     model, tokenizer = get_model_and_tokenizer(model_path)
 
     # load datasets
