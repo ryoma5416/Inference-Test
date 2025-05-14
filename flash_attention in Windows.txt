@@ -1,0 +1,12 @@
+去
+https://github.com/kingbri1/flash-attention/releases
+下載對應版本的 wheel
+
+在 terminal 對應的環境中 pip install wheeel_path
+wheeel_path 是 wheel 的路徑
+
+安裝 triton
+pip install -U triton-windows
+版本看這
+https://github.com/woct0rdho/triton-windows/releases
+
