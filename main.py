@@ -6,7 +6,6 @@ import torch
 
 
 # STOP_SEQUENCES 為模型遇到那些字出現時會停止輸出
-
 STOP_SEQUENCES = ['\n\n\n\n', '\n\n\n', '\n\n', '\n', 'Question:', 'Context:']
 class StoppingCriteriaSub(StoppingCriteria):
     """Stop generations when they match a particular text or token."""
@@ -99,8 +98,8 @@ def generic_inference(model, tokenizer, prompt, stop_sequences=None):
 
 
 if __name__ == "__main__":
-    # load model  model_name 放模型的資料夾名稱
-    model_name = 'Meta-Llama-3.2-3B-Instruct-hf'
+    # load model
+    model_name = 'Meta-Llama-3.2-3B-Instruct-hf' # model_name 放模型的資料夾名稱
     model_path = rf'models\{model_name}'
     model, tokenizer = get_model_and_tokenizer(model_path)
 
